@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "income inequality"
+  title: ""
   navbar:
     left:
       - href: index.qmd
