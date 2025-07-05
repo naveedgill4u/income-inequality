@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "Author is an expert in Finance, accounts and audit with qualification of Master of Philisophy in Business Management from Pakistan, and lerning Data Analysis from Kane’s Data Science Bootcamp. Income inequality is hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people. Income inequality is not only burning issue for developing nations but also for developed countires. In this document author has explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020. The document has two expositions of income inequality; first in the form of graph showing name of counties on Y axis and Gini Index on X axis. Scond, an interactive map of these counties with Gini Index of income inequality, the reder may click on map to see the figures in zoom."
   },
   {
     "objectID": "index.html#description",
@@ -19,5 +19,19 @@
     "title": "income inequality",
     "section": "Description",
     "text": "Description\nThe image presents a horizontal bar chart titled “Top 20 Counties by Income Inequality (Gini Index)”, based on data from the American Community Survey (ACS) 2020. It visualizes the counties in the United States with the highest levels of income inequality, as measured by the Gini Index. The Gini Index values range approximately from 0.55 to over 0.66, with higher values indicating greater inequality. Harding County, New Mexico ranks highest, followed closely by East Carroll Parish, Louisiana and Humphreys County, Mississippi. The source of the data is clearly cited in the caption at the bottom right: “Data Source: ACS 2020”. This chart effectively highlights geographic areas in the U.S. with the most pronounced income disparities."
+  },
+  {
+    "objectID": "source.html",
+    "href": "source.html",
+    "title": "Data source",
+    "section": "",
+    "text": "The data source for this document is the Gini Index from the ACS 2020\n(American Community Survey 5-Year Estimates), which is a standard\nmeasure of income inequality within a geographic area.\nVariable ID is B19083_001 and the title of the table is Gini Index of Income Inequality.\nThis table provides data of counties having income inequality in U.S.A under five columns. A specimen sample is as under:"
+  },
+  {
+    "objectID": "source.html#procedure",
+    "href": "source.html#procedure",
+    "title": "Data source",
+    "section": "Procedure:",
+    "text": "Procedure:\nFor comparsion of income inequality, 20 counties having highest income inequality were selected with name of county and estimes:\n\ncode to access data of 20 counties & Output\ngini_data_clean |&gt;\n  arrange(desc(Gini_Index)) |&gt;\n  slice_head(n = 20)\n Output:\n tibble: 20 × 2\n   County                           Gini_Index\n   &lt;chr&gt;                                 &lt;dbl&gt;\n 1 Harding County, New Mexico            0.696\n 2 East Carroll Parish, Louisiana        0.652\n 3 Humphreys County, Mississippi         0.636\n 4 Mayagüez Municipio, Puerto Rico       0.619\n 5 Buena Vista city, Virginia            0.616\n 6 Bossier Parish, Louisiana             0.611\n 7 San Juan Municipio, Puerto Rico       0.610\n 8 New York County, New York             0.595\n 9 Claiborne County, Mississippi         0.589\n10 Lee County, Arkansas                  0.589\n11 Dickenson County, Virginia            0.584\n12 Moca Municipio, Puerto Rico           0.581\n13 Leflore County, Mississippi           0.581\n14 Lake County, Tennessee                0.578\n15 Ponce Municipio, Puerto Rico          0.572\n16 Aguadilla Municipio, Puerto Rico      0.571\n17 Radford city, Virginia                0.568\n18 Issaquena County, Mississippi         0.568\n19 Shenandoah County, Virginia           0.568\n20 Orleans Parish, Louisiana             0.566 \n\n\nAI was used throughout the process"
   }
 ]

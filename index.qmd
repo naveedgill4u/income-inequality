@@ -10,6 +10,7 @@ execute:
 #| warning: false
 library(tidycensus)
 library(tidyverse)
+library(dplyr)
 library(leaflet)
 library(sf)
 ```
@@ -50,4 +51,29 @@ The image presents a horizontal bar chart titled "Top 20 Counties by Income Ineq
 ```{r}
 #| message: false
 #| warning: false
+#| results: hide
+# for seeing variables of Gini Index remove the abou
+gini_states <- get_acs(
+  geography = "state",
+  variables = "B19083_001",
+  year = 2020,
+  survey = "acs5"
+)
+head(gini_states)
+
 ```
+
+```{r}
+#| message: false
+#| warning: false
+#| results: hide
+# for seeing data tibble of selected states
+gini_data_clean |>
+  arrange(desc(Gini_Index)) |>
+  slice_head(n = 20)
+
+head(gini_data_clean)
+```
+
+
+
