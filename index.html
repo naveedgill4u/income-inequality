@@ -79,11 +79,6 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">income inequality</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -118,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
   </ul>
 </nav>
     </div>
@@ -150,6 +146,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>Income inequality is the hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people. Income inequality is not only burning issue for developing nations but also for developed countires. In this document I have explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020. The document has two expositions of income inequality; first in the form of graph showing name of counties on Y axis and Gini Index on X axis. Scond, an interactive map of these counties with Gini Index of income inequality, the reder may click on map to see the figures in zoom. The results show that Harding County, New Mexico ranks highest, followed by East Carroll Parish, Louisiana with income inequality more than 0.6 out of 1 as per Gini Index measure.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -159,6 +158,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
 <p>The image presents a horizontal bar chart titled “Top 20 Counties by Income Inequality (Gini Index)”, based on data from the American Community Survey (ACS) 2020. It visualizes the counties in the United States with the highest levels of income inequality, as measured by the Gini Index. The Gini Index values range approximately from 0.55 to over 0.66, with higher values indicating greater inequality. Harding County, New Mexico ranks highest, followed closely by East Carroll Parish, Louisiana and Humphreys County, Mississippi. The source of the data is clearly cited in the caption at the bottom right: “Data Source: ACS 2020”. This chart effectively highlights geographic areas in the U.S. with the most pronounced income disparities.</p>
@@ -239,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/naveedgill4u\.github\.io\/income-inequality\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
