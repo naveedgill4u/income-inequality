@@ -1,0 +1,51 @@
+Data source for this document is Gini Index from the ACS 2020 
+(American Community Survey 5-Year Estimates) which is a standard
+measure of income inequality within a geographic area.
+Variable ID is B19083_001 and title of tbale is Gini Index of Income
+Inequality. This table has data of states of USA under five colums,
+specimen sample is as under:
+code: gini_states <- get_acs(
+  geography = "state",
+  variables = "B19083_001",
+  year = 2020,
+  survey = "acs5")
+# A tibble: 6 × 5
+  GEOID NAME       variable   estimate    moe
+  <chr> <chr>      <chr>         <dbl>  <dbl>
+1 01    Alabama    B19083_001    0.478 0.0023
+2 02    Alaska     B19083_001    0.423 0.0046
+3 04    Arizona    B19083_001    0.466 0.0027
+4 05    Arkansas   B19083_001    0.479 0.0044
+5 06    California B19083_001    0.487 0.001 
+6 08    Colorado   B19083_001    0.456 0.0021
+
+Procedure:
+For comparsion of income inequality 20 counties having highest
+income inequality were selected with name od county and estimes:
+code: gini_data_clean |>
+  arrange(desc(Gini_Index)) |>
+  slice_head(n = 20)
+# A tibble: 20 × 2
+   County                           Gini_Index
+   <chr>                                 <dbl>
+ 1 Harding County, New Mexico            0.696
+ 2 East Carroll Parish, Louisiana        0.652
+ 3 Humphreys County, Mississippi         0.636
+ 4 Mayagüez Municipio, Puerto Rico       0.619
+ 5 Buena Vista city, Virginia            0.616
+ 6 Bossier Parish, Louisiana             0.611
+ 7 San Juan Municipio, Puerto Rico       0.610
+ 8 New York County, New York             0.595
+ 9 Claiborne County, Mississippi         0.589
+10 Lee County, Arkansas                  0.589
+11 Dickenson County, Virginia            0.584
+12 Moca Municipio, Puerto Rico           0.581
+13 Leflore County, Mississippi           0.581
+14 Lake County, Tennessee                0.578
+15 Ponce Municipio, Puerto Rico          0.572
+16 Aguadilla Municipio, Puerto Rico      0.571
+17 Radford city, Virginia                0.568
+18 Issaquena County, Mississippi         0.568
+19 Shenandoah County, Virginia           0.568
+20 Orleans Parish, Louisiana             0.566
+
