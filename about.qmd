@@ -5,6 +5,7 @@ author: Naveed Ahmad
 
 My email for contact: [naveedgill4u@yahoo.com](mailto:naveedgill4u@yahoo.com).
 <i class="fa-brands fa-github"></i> [Income Inequality](https://github.com/naveedgill4u/income-inequality.git)
+Deeply thankful to Preceptor for organizing free Data Science Bootcamp and illuminating us with knowldege of current era in Data Science.
 🌐 [David Kane’s Free Data Science Bootcamp](https://bootcamp.davidkane.info/)
 
 <div style="text-align: justify;"> Author is an expert in Finance, accounts and audit with qualification of Master of Philisophy in Business Management from Pakistan, and lerning Data Analysis from Kane's Data Science Bootcamp. Income inequality is hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people. Income inequality is not only burning issue for developing nations but also for developed countires.
