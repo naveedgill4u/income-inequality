@@ -6,16 +6,15 @@ execute:
 ---
 
 ### Summary
-Income inequality is the hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people (SDG 10). Income inequality is not only burning issue for developing nations but also for developed countires.
-In this document I have explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020. The document has two expositions of income inequality; first in the form of graph showing name of counties on Y axis and Gini Index on X axis. Scond, an interactive map of these counties with Gini Index of income inequality, the reder may click on map to see the figures in zoom. The results show that Harding County, New Mexico ranks highest, followed by East Carroll Parish, Louisiana with income inequality more than 0.6 out of 1 as per Gini Index measure.
+<div style="text-align: justify;"> Income inequality is the hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people (SDG 10). Income inequality is not only burning issue for developing nations but also for developed countires.
+In this document I have explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020. The Gini Index rages from 0 to 1; 0 means no income inequality which is practically impossible, 1 meanes income rests with only one household in a county. Futher, upto 0.3 means acceptable income inequality and byound 0.4 income inequality exists. This document has  exposition of income inequality in the form of a graph showing name of counties on Y axis and Gini Index on X axis. The results show that Harding County, New Mexico ranks highest, followed by East Carroll Parish, Louisiana with income inequality more than 0.6 out of 1 as per Gini Index measure.</div>
+
 ```{r}
 #| message: false
 #| warning: false
 library(tidycensus)
 library(tidyverse)
 library(dplyr)
-library(leaflet)
-library(sf)
 ```
 
 ```{r}
@@ -33,6 +32,7 @@ gini_data_clean <- gini_data |>
 
 ```
 
+## Plot Showing Income Inequality
 ```{r}
 #| message: false
 #| warning: false
@@ -42,41 +42,13 @@ gini_data_clean |>
   ggplot(aes(x = reorder(County, Gini_Index), y = Gini_Index)) +
   geom_col(fill = "darkred") +
   coord_flip() +
-  labs(title = "Top 20 Counties by Income Inequality (Gini Index)",
-       x = "County",
+  labs(title = "Top 20 Counties by Income Inequality (Gini Index) USA",
+          subtitle = "Significant Income Inequality exists", 
+       x = "County Name",
        y = "Gini Index",
        caption = "Data Source: ACS 2020") +
   theme_minimal()
-
 ```
 ## Description
-The image presents a horizontal bar chart titled "Top 20 Counties by Income Inequality (Gini Index)", based on data from the American Community Survey (ACS) 2020. It visualizes the counties in the United States with the highest levels of income inequality, as measured by the Gini Index. The Gini Index values range approximately from 0.55 to over 0.66, with higher values indicating greater inequality. Harding County, New Mexico ranks highest, followed closely by East Carroll Parish, Louisiana and Humphreys County, Mississippi. The source of the data is clearly cited in the caption at the bottom right: "Data Source: ACS 2020". This chart effectively highlights geographic areas in the U.S. with the most pronounced income disparities.
-```{r}
-#| message: false
-#| warning: false
-#| results: hide
-# for seeing variables of Gini Index remove the abou
-gini_states <- get_acs(
-  geography = "state",
-  variables = "B19083_001",
-  year = 2020,
-  survey = "acs5"
-)
-head(gini_states)
-
-```
-
-```{r}
-#| message: false
-#| warning: false
-#| results: hide
-# for seeing data tibble of selected states
-gini_data_clean |>
-  arrange(desc(Gini_Index)) |>
-  slice_head(n = 20)
-
-head(gini_data_clean)
-```
-
-
+<div style="text-align: justify;">The image presents a horizontal bar chart titled "Top 20 Counties by Income Inequality (Gini Index)", based on data from the American Community Survey (ACS) 2020. It visualizes the counties in the United States with the highest levels of income inequality, as measured by the Gini Index. The Gini Index values range approximately from 0.55 to over 0.66, with higher values indicating greater inequality. Harding County, New Mexico ranks highest, followed closely by East Carroll Parish, Louisiana and Humphreys County, Mississippi. The source of the data is clearly cited in the caption at the bottom right: "Data Source: ACS 2020". This chart effectively highlights 20 counties having highest income disparities in USA.</div>
 

@@ -1,0 +1,7 @@
+---
+title: "Dedication"
+author: Naveed Ahmad
+format: html
+---
+
+<div style="text-align: justify;">I dedicate what I have learned and applied in this document to ##Preceptor # for his generosity that he organized free Data Science Bootcamp for us 🌐 [David Kane’s Free Data Science Bootcamp](https://bootcamp.davidkane.info/) </div>
