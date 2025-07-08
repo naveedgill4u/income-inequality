@@ -7,5 +7,5 @@ author: Naveed Ahmad
 
 
 <div style="text-align: justify;"> Author is an expert in Finance, accounts and audit with qualification of Master of Philisophy in Business Management from Pakistan. You may approcah me through email:[naveedgill4u@yahoo.com](mailto:naveedgill4u@yahoo.com).
-<i class="fa-brands fa-github"></i> You can also visit me [Income Inequality](https://github.com/naveedgill4u/income-inequality). I am Deeply thankful to Preceptor for organizing free Data Science Bootcamp and illuminating us with knowldege of current era in Data Science 🌐 [David Kane’s Free Data Science Bootcamp](https://bootcamp.davidkane.info/) . 
+<i class="fa-brands fa-github"></i> You can also visit me [Github](https://github.com/naveedgill4u). I am Deeply thankful to Preceptor for organizing free Data Science Bootcamp and illuminating us with knowldege of current era in Data Science 🌐 [David Kane’s Free Data Science Bootcamp](https://bootcamp.davidkane.info/) . 
 Income inequality is at agenda of Nations through Sustaniable Development Goals (SDG-1o). In this document I have explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020.</div>
