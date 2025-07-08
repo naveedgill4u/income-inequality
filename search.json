@@ -14,24 +14,38 @@
     "text": "Procedure:\nFor comparsion of income inequality, 20 counties having highest income inequality were selected with name of county and estimes:\n\ncode to access data of 20 counties & Output\ngini_data_clean |&gt;\n  arrange(desc(Gini_Index)) |&gt;\n  slice_head(n = 20)\n Output:\n tibble: 20 × 2\n   County                           Gini_Index\n   &lt;chr&gt;                                 &lt;dbl&gt;\n 1 Harding County, New Mexico            0.696\n 2 East Carroll Parish, Louisiana        0.652\n 3 Humphreys County, Mississippi         0.636\n 4 Mayagüez Municipio, Puerto Rico       0.619\n 5 Buena Vista city, Virginia            0.616\n 6 Bossier Parish, Louisiana             0.611\n 7 San Juan Municipio, Puerto Rico       0.610\n 8 New York County, New York             0.595\n 9 Claiborne County, Mississippi         0.589\n10 Lee County, Arkansas                  0.589\n11 Dickenson County, Virginia            0.584\n12 Moca Municipio, Puerto Rico           0.581\n13 Leflore County, Mississippi           0.581\n14 Lake County, Tennessee                0.578\n15 Ponce Municipio, Puerto Rico          0.572\n16 Aguadilla Municipio, Puerto Rico      0.571\n17 Radford city, Virginia                0.568\n18 Issaquena County, Mississippi         0.568\n19 Shenandoah County, Virginia           0.568\n20 Orleans Parish, Louisiana             0.566 \n\n\nAI was used throughout the process"
   },
   {
+    "objectID": "Dedication.html",
+    "href": "Dedication.html",
+    "title": "Dedication",
+    "section": "",
+    "text": "I dedicate what I have learned and applied in this document to ##Preceptor # for his generosity that he organized free Data Science Bootcamp for us 🌐 David Kane’s Free Data Science Bootcamp"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "My email for contact: naveedgill4u@yahoo.com.  Income Inequality 🌐 David Kane’s Free Data Science Bootcamp\n\nAuthor is an expert in Finance, accounts and audit with qualification of Master of Philisophy in Business Management from Pakistan, and lerning Data Analysis from Kane’s Data Science Bootcamp. Income inequality is hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people. Income inequality is not only burning issue for developing nations but also for developed countires. In this document author has explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020. The document has two expositions of income inequality; first in the form of graph showing name of counties on Y axis and Gini Index on X axis. Scond, an interactive map of these counties with Gini Index of income inequality, the reder may click on map to see the figures in zoom."
+    "text": "Author is an expert in Finance, accounts and audit with qualification of Master of Philisophy in Business Management from Pakistan. You may approcah me through email:naveedgill4u@yahoo.com.  You can also visit me Income Inequality. I am Deeply thankful to Preceptor for organizing free Data Science Bootcamp and illuminating us with knowldege of current era in Data Science 🌐 David Kane’s Free Data Science Bootcamp . Income inequality is at agenda of Nations through Sustaniable Development Goals (SDG-1o). In this document I have explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "income inequality",
     "section": "",
-    "text": "Income inequality is the hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people (SDG 10). Income inequality is not only burning issue for developing nations but also for developed countires. In this document I have explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020. The document has two expositions of income inequality; first in the form of graph showing name of counties on Y axis and Gini Index on X axis. Scond, an interactive map of these counties with Gini Index of income inequality, the reder may click on map to see the figures in zoom. The results show that Harding County, New Mexico ranks highest, followed by East Carroll Parish, Louisiana with income inequality more than 0.6 out of 1 as per Gini Index measure."
+    "text": "Income inequality is the hot topic at agenda of Nations because for inclusive development, it is mandatory to minimize gap of income inequality among people (SDG 10). Income inequality is not only burning issue for developing nations but also for developed countires. In this document I have explained a picture of income inequality among 20 counties having higest level of income inequality in USA. The document is prepared by accessing data from American Community Servey (ACS) 2020. The Gini Index rages from 0 to 1; 0 means no income inequality which is practically impossible, 1 meanes income rests with only one household in a county. Futher, upto 0.3 means acceptable income inequality and byound 0.4 income inequality exists. This document has exposition of income inequality in the form of a graph showing name of counties on Y axis and Gini Index on X axis. The results show that Harding County, New Mexico ranks highest, followed by East Carroll Parish, Louisiana with income inequality more than 0.6 out of 1 as per Gini Index measure."
+  },
+  {
+    "objectID": "index.html#plot-showing-income-inequality",
+    "href": "index.html#plot-showing-income-inequality",
+    "title": "income inequality",
+    "section": "Plot Showing Income Inequality",
+    "text": "Plot Showing Income Inequality"
   },
   {
     "objectID": "index.html#description",
     "href": "index.html#description",
     "title": "income inequality",
     "section": "Description",
-    "text": "Description\nThe image presents a horizontal bar chart titled “Top 20 Counties by Income Inequality (Gini Index)”, based on data from the American Community Survey (ACS) 2020. It visualizes the counties in the United States with the highest levels of income inequality, as measured by the Gini Index. The Gini Index values range approximately from 0.55 to over 0.66, with higher values indicating greater inequality. Harding County, New Mexico ranks highest, followed closely by East Carroll Parish, Louisiana and Humphreys County, Mississippi. The source of the data is clearly cited in the caption at the bottom right: “Data Source: ACS 2020”. This chart effectively highlights geographic areas in the U.S. with the most pronounced income disparities."
+    "text": "Description\n\nThe image presents a horizontal bar chart titled “Top 20 Counties by Income Inequality (Gini Index)”, based on data from the American Community Survey (ACS) 2020. It visualizes the counties in the United States with the highest levels of income inequality, as measured by the Gini Index. The Gini Index values range approximately from 0.55 to over 0.66, with higher values indicating greater inequality. Harding County, New Mexico ranks highest, followed closely by East Carroll Parish, Louisiana and Humphreys County, Mississippi. The source of the data is clearly cited in the caption at the bottom right: “Data Source: ACS 2020”. This chart effectively highlights 20 counties having highest income disparities in USA."
   }
 ]

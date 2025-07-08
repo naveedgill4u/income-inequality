@@ -8,7 +8,7 @@
 
 <meta name="author" content="Naveed Ahmad">
 
-<title>Data source</title>
+<title>Dedication</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -129,11 +94,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./source.html" aria-current="page"> 
+    <a class="nav-link" href="./source.html"> 
 <span class="menu-text">Source</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Dedication.html"> 
+    <a class="nav-link active" href="./Dedication.html" aria-current="page"> 
 <span class="menu-text">Dedication</span></a>
   </li>  
 </ul>
@@ -147,26 +112,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#code-used-to-extract-state-level-gini-index-output" id="toc-code-used-to-extract-state-level-gini-index-output" class="nav-link active" data-scroll-target="#code-used-to-extract-state-level-gini-index-output">Code used to extract state-level Gini Index &amp; Output</a></li>
-  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure">Procedure:</a>
-  <ul class="collapse">
-  <li><a href="#code-to-access-data-of-20-counties-output" id="toc-code-to-access-data-of-20-counties-output" class="nav-link" data-scroll-target="#code-to-access-data-of-20-counties-output">code to access data of 20 counties &amp; Output</a></li>
-  <li><a href="#ai-was-used-throughout-the-process" id="toc-ai-was-used-throughout-the-process" class="nav-link" data-scroll-target="#ai-was-used-throughout-the-process">AI was used throughout the process</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data source</h1>
+<h1 class="title">Dedication</h1>
 </div>
 
 
@@ -189,70 +143,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The data source for this document is the <strong>Gini Index from the ACS 2020</strong><br>
-(<em>American Community Survey 5-Year Estimates</em>), which is a standard<br>
-measure of income inequality within a geographic area.</p>
-<p>Variable ID is <code>B19083_001</code> and the title of the table is <em>Gini Index of Income Inequality</em>.<br>
-This table provides data of counties having income inequality in U.S.A under five columns. A specimen sample is as under:</p>
-<section id="code-used-to-extract-state-level-gini-index-output" class="level3">
-<h3 class="anchored" data-anchor-id="code-used-to-extract-state-level-gini-index-output">Code used to extract state-level Gini Index &amp; Output</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>gini_states <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">geography =</span> <span class="st">"state"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">variables =</span> <span class="st">"B19083_001"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="dv">2020</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Sample <span class="fu">Output</span> (first <span class="dv">6</span> rows)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 6 × 5</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  GEOID NAME       variable     estimate    moe</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>      <span class="er">&lt;</span>chr<span class="sc">&gt;</span>           <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>   <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">01</span>    Alabama    B19083_001      <span class="fl">0.478</span>  <span class="fl">0.0023</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">02</span>    Alaska     B19083_001      <span class="fl">0.423</span>  <span class="fl">0.0046</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">04</span>    Arizona    B19083_001      <span class="fl">0.466</span>  <span class="fl">0.0027</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">05</span>    Arkansas   B19083_001      <span class="fl">0.479</span>  <span class="fl">0.0044</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">06</span>    California B19083_001      <span class="fl">0.487</span>  <span class="fl">0.0010</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> <span class="dv">08</span>    Colorado   B19083_001      <span class="fl">0.456</span>  <span class="fl">0.0021</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="procedure" class="level2">
-<h2 class="anchored" data-anchor-id="procedure">Procedure:</h2>
-<p>For comparsion of income inequality, 20 counties having highest income inequality were selected with name of county and estimes:</p>
-<section id="code-to-access-data-of-20-counties-output" class="level3">
-<h3 class="anchored" data-anchor-id="code-to-access-data-of-20-counties-output">code to access data of 20 counties &amp; Output</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>gini_data_clean <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Gini_Index)) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> Output<span class="sc">:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> tibble<span class="sc">:</span> <span class="dv">20</span> × <span class="dv">2</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>   County                           Gini_Index</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>   <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>                                 <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span> Harding County, New Mexico            <span class="fl">0.696</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span> East Carroll Parish, Louisiana        <span class="fl">0.652</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span> Humphreys County, Mississippi         <span class="fl">0.636</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">4</span> Mayagüez Municipio, Puerto Rico       <span class="fl">0.619</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="dv">5</span> Buena Vista city, Virginia            <span class="fl">0.616</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> <span class="dv">6</span> Bossier Parish, Louisiana             <span class="fl">0.611</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a> <span class="dv">7</span> San Juan Municipio, Puerto Rico       <span class="fl">0.610</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a> <span class="dv">8</span> New York County, New York             <span class="fl">0.595</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a> <span class="dv">9</span> Claiborne County, Mississippi         <span class="fl">0.589</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> Lee County, Arkansas                  <span class="fl">0.589</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> Dickenson County, Virginia            <span class="fl">0.584</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> Moca Municipio, Puerto Rico           <span class="fl">0.581</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="dv">13</span> Leflore County, Mississippi           <span class="fl">0.581</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="dv">14</span> Lake County, Tennessee                <span class="fl">0.578</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="dv">15</span> Ponce Municipio, Puerto Rico          <span class="fl">0.572</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> Aguadilla Municipio, Puerto Rico      <span class="fl">0.571</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="dv">17</span> Radford city, Virginia                <span class="fl">0.568</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="dv">18</span> Issaquena County, Mississippi         <span class="fl">0.568</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="dv">19</span> Shenandoah County, Virginia           <span class="fl">0.568</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="dv">20</span> Orleans Parish, Louisiana             <span class="fl">0.566</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="ai-was-used-throughout-the-process" class="level3">
-<h3 class="anchored" data-anchor-id="ai-was-used-throughout-the-process">AI was used throughout the process</h3>
+<div style="text-align: justify;">
+I dedicate what I have learned and applied in this document to ##Preceptor # for his generosity that he organized free Data Science Bootcamp for us 🌐 <a href="https://bootcamp.davidkane.info/">David Kane’s Free Data Science Bootcamp</a>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
